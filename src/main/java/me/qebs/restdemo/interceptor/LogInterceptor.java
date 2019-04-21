@@ -5,6 +5,7 @@ import me.qebs.restdemo.concurrent.Constants;
 import me.qebs.restdemo.concurrent.TraceContext;
 import me.qebs.restdemo.utils.IPUtils;
 import org.slf4j.MDC;
+import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
@@ -12,6 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 @Slf4j
+@Component
 public class LogInterceptor extends HandlerInterceptorAdapter {
     public LogInterceptor() {
         super();

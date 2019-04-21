@@ -15,7 +15,7 @@
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
         <!--对日志进行格式化-->
         <encoder>
-            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{35} - %msg %n</pattern>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] [%X{__X-TRACE_ID__}] %-5level %logger{35} - %msg%n</pattern>
         </encoder>
     </appender>
     <!--把日志添加到文件-->
@@ -25,7 +25,7 @@
         <!--如果是 true，日志被追加到文件结尾，如果是 false，清空现存文件，默认是true。-->
         <append>true</append>
         <encoder>
-            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{35} - %msg %n</pattern>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] [%X{__X-TRACE_ID__}] %-5level %logger{35} - %msg %n</pattern>
         </encoder>
     </appender>
     <!--滚动记录文件，先将日志记录到指定文件，当符合某个条件时，将日志记录到其他文件。-->
